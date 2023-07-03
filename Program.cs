@@ -2,11 +2,14 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.EntityFrameworkCore;
 using Divisor.DAL;
+using Divisor.BLL;
 
 var builder = WebApplication.CreateBuilder(args);
 var ConStr = builder.Configuration.GetConnectionString("ConStr");
 builder.Services.AddDbContext<Contexto>(Options => Options.UseSqlite(ConStr));
 
+builder.Services.AddScoped<StudentsBLL>();
+builder.Services.AddScoped<TeamsBLL>();
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();

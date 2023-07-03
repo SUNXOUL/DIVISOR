@@ -7,10 +7,10 @@ using Divisor.DAL;
 using Divisor.Models;
 namespace Divisor.BLL
 {
-    public class StudentBLL
+    public class StudentsBLL
     {
         private Contexto _contexto;
-        public StudentBLL(Contexto contexto)
+        public StudentsBLL(Contexto contexto)
         {
             _contexto = contexto;
         }
